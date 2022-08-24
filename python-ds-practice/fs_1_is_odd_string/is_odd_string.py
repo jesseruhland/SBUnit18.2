@@ -29,3 +29,15 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    count = 0
+
+    lower_word = word.lower()
+
+    for char in word:
+        val = ord(char) - 96
+        count += val
+    
+    if count % 2 == 0:
+        return False
+    
+    return True
