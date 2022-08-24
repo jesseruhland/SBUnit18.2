@@ -23,3 +23,17 @@ def sum_range(nums, start=0, end=None):
         >>> sum_range(nums, 1, 99)
         9
     """
+    sum_result = 0
+
+    if not start:
+        start = 0
+    
+    if not end:
+        end = len(nums)
+    
+    for index, num in enumerate(nums):
+        if index >= start and index <= end:
+            sum_result += num
+    
+    return sum_result
+
